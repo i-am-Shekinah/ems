@@ -3,6 +3,7 @@ package com.encentral.entities;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "attendances", indexes = {@Index(name = "idx_att_user_date", columnList = "user_id, dateRecorded")})
@@ -10,7 +11,7 @@ public class Attendance {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
+    public UUID id;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "user_id")
