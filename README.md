@@ -1,8 +1,11 @@
 # Employee Management System (EMS)
 
 **Author:** Michael Olatunji
+
 **Framework:** Play Framework (Java)
+
 **Build Tool:** Maven
+
 **Database:** PostgreSQL
 
 ---
