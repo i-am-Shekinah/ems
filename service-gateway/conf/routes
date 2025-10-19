@@ -17,3 +17,18 @@ GET            /api-server/error/                                              c
 GET            /error                                                          controllers.HomeController.error()
 GET            /error/                                                         controllers.HomeController.error()
 GET            /api-docs                                                       controllers.HomeController.api()
+
+
+# Auth
+POST    /api/auth/signin            controllers.AuthController.signIn
+
+# Admin (require X-User-Token header for admin)
+POST    /api/admin/employees        controllers.AdminController.addEmployee
+DELETE  /api/admin/employees/:id    controllers.AdminController.removeEmployee(id:Long)
+GET     /api/admin/employees        controllers.AdminController.getEmployees
+GET     /api/admin/employees/:id/attendance/:ymd   controllers.AdminController.getEmployeeDailyAttendance(id:Long, ymd:String)
+
+# Employee
+POST    /api/employee/attendance    controllers.EmployeeController.markAttendance
+POST    /api/employee/password      controllers.EmployeeController.updatePassword
+GET     /api/employee/attendance/:ymd controllers.EmployeeController.getMyDailyAttendance(ymd:String)
