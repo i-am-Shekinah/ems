@@ -131,6 +131,26 @@
             <version>2.0.1.Final</version>
         </dependency>
 
+        <!-- extra dependencies -->
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-jaxrs2</artifactId>
+            <version>2.2.21</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>2.2.21</version>
+        </dependency>
+
+        <!-- generate json docs -->
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-core</artifactId>
+            <version>2.2.21</version>
+        </dependency>
+
 
     </dependencies>
 
